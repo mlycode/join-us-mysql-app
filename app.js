@@ -14,16 +14,25 @@ const connection = mysql.createConnection({
 });
 
 connection.connect((error) => {
-    if(error) {
+    if (error) {
         throw error;
     }
     console.log("MySQL Connected");
 });
 
-connection.query('SELECT 1 + 1 AS solution', (error, results, fields) => {
-    if (error) throw error;
-    console.log('The solution is: ', results[0].solution);
-});
+//Inserting 500 random users
+// const userData = [];
+// for (i = 0; i < 500; i++) {
+//     userData.push([
+//         faker.internet.email(),
+//         faker.date.past()
+//     ]);
+// };
+// const insertUsers = "INSERT INTO users (email, created_at) VALUES ?"
+// connection.query(insertUsers, [userData], (err, results) => {
+//     if (err) throw err;
+//     console.log(results);
+// });
 
 connection.end();
 
