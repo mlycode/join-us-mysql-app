@@ -1,8 +1,14 @@
-<h1>JOIN US</h1>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+<link rel="stylesheet" href="/app.css">
 
-<p>Enter your Email to join <strong><%=totalUsers%></strong> others on our waitlist</p>
-
-<form method="POST" action="/register">
-    <input type="email" name="email" placeholder="Enter your Email" required>
-    <button>Join Now</button>
-</form>
+<div class="flex-container">
+    <div class="container">
+        <h1>JOIN US</h1>
+        <p class="lead">Enter your Email to join <strong>
+                <%=totalUsers%></strong> others on our waitlist</p>
+        <form method="POST" action="/register">
+            <input type="email" name="email" class="form" placeholder="Enter your Email" required>
+            <button>Join Now</button>
+        </form>
+    </div>
+</div>
